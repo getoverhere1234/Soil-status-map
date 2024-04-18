@@ -12,25 +12,16 @@ def add_click_events(map_object):
 
 def display_legend():
     """Display legend for the codes."""
-    st.sidebar.markdown(
-        """
-        <div style='border: 2px solid darkblue; padding: 10px;'>
-            <h3 style='text-align: center; color: Black;'>Code Interpreter</h3>
-            <ul>
-                <li><b>Code 1</b>: Low pH, N, Zn and Mn</li>
-                <li><b>Code 2</b>: Low pH, Zn and Mn</li>
-                <li><b>Code 3</b>: Low pH, N and Mn</li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
+    st.sidebar.header("Legend")
+    st.sidebar.markdown("**Code 1**: Low pH, N, Zn and Mn")
+    st.sidebar.markdown("**Code 2**: Low pH, Zn and Mn")
+    st.sidebar.markdown("**Code 3**: Low pH, N and Mn")
 
 def main():
-    #st.title("Soil Status Map")
-    st.markdown("<h1 style='text-align: center; color: darkblue; font-family: Arial; font-weight: bold;'><b>SOIL STATUS MAP</b></h1>", unsafe_allow_html=True)
-    #st.markdown("<h3 style='text-align: center; color: darkblue; font-family: Arial; font-style: italic; font-weight: bold;'>Designed and engineered by Dr. Watitemjen</h3>", unsafe_allow_html=True)
+    st.title("Soil Status Map")
+    st.markdown("<h1 style='text-align: center; color: white;'><b>Soil Status Map</b></h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: white;'>Designed and engineered by Dr. Watitemjen</h3>", unsafe_allow_html=True)
+
     # Set background color
     st.markdown(
         """
@@ -95,7 +86,7 @@ def main():
                 folium_static(m)
 
             # Input boxes for manual latitude and longitude
-            st.sidebar.header("Add Soil GPS coordinates")
+            st.sidebar.header("Add Custom Marker")
             input_lat = st.sidebar.number_input("Enter Latitude:", value=main_data['Latitude'].mean())
             input_lon = st.sidebar.number_input("Enter Longitude:", value=main_data['Longitude'].mean())
 

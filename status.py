@@ -18,9 +18,9 @@ def display_legend():
     st.sidebar.markdown("**Code 3**: Low pH, N and Mn")
 
 def main():
-    st.title("Soil Status Map")
-    st.markdown("<h1 style='text-align: center; color: white;'><b>Soil Status Map</b></h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center; color: white;'>Designed and engineered by Dr. Watitemjen</h3>", unsafe_allow_html=True)
+    st.title("Soil Quality Map")
+    #st.markdown("<h1 style='text-align: center; color: white;'><b>Soil Status Map</b></h1>", unsafe_allow_html=True)
+    #st.markdown("<h3 style='text-align: center; color: white;'>Designed and engineered by Dr. Watitemjen</h3>", unsafe_allow_html=True)
 
     # Set background color
     st.markdown(
